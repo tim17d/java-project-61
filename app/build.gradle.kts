@@ -21,6 +21,10 @@ tasks.compileJava {
     options.release = 20
 }
 
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
+}
+
 tasks.test {
     useJUnitPlatform()
 }
