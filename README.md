@@ -4,10 +4,16 @@
 
 # Gameplay screenshots
 
-## Even game
+## Even game:
 ![image](https://github.com/tim17d/java-project-61/assets/68468445/e9ef3ac4-92a5-4502-83c2-7eef6a657563)
 ![image](https://github.com/tim17d/java-project-61/assets/68468445/93160e65-8af3-42a4-9fde-b60f372258ef)
 
-## Calc game
+
+## Calc game:
 ![image](https://github.com/tim17d/java-project-61/assets/68468445/b2ce5e1a-e604-4422-93d4-389ffda53cd9)
 ![image](https://github.com/tim17d/java-project-61/assets/68468445/1faedd2d-7d85-4ce3-8e46-3fb9c955b6ff)
+
+
+## GCD game:
+![image](https://github.com/tim17d/java-project-61/assets/68468445/eaee071b-29fe-4eb4-a6f6-516609156e7c)
+![image](https://github.com/tim17d/java-project-61/assets/68468445/9c4d452b-e33b-406c-97cb-82d0b84b260f)
