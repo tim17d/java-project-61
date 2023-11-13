@@ -13,20 +13,14 @@ public class App {
                 + "3 - Calc\n"
                 + "0 - Exit");
         System.out.print("Your choice: ");
-        var sc = new Scanner(System.in);
-        var gameNumber = sc.nextInt();
+        var scanner = new Scanner(System.in);
+        var gameNumber = scanner.next();
         switch (gameNumber) {
-            case 1:
-                Cli.greet();
-                break;
-            case 2:
-                Even.play();
-                break;
-            case 3:
-                Calc.play();
-                break;
-            default:
-                break;
+            case "1" -> Cli.greet();
+            case "2" -> Even.play();
+            case "3" -> Calc.play();
+            default -> {
+            }
         }
     }
 }
