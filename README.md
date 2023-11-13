@@ -17,3 +17,8 @@
 ## GCD game:
 ![image](https://github.com/tim17d/java-project-61/assets/68468445/eaee071b-29fe-4eb4-a6f6-516609156e7c)
 ![image](https://github.com/tim17d/java-project-61/assets/68468445/9c4d452b-e33b-406c-97cb-82d0b84b260f)
+
+
+## Progression game:
+![image](https://github.com/tim17d/java-project-61/assets/68468445/e9b0b60a-b16d-4721-8239-1dac7b87cf09)
+![image](https://github.com/tim17d/java-project-61/assets/68468445/3ff3a789-1bbb-4ddd-be04-e9bbe28064f4)
