@@ -22,3 +22,8 @@
 ## Progression game:
 ![image](https://github.com/tim17d/java-project-61/assets/68468445/e9b0b60a-b16d-4721-8239-1dac7b87cf09)
 ![image](https://github.com/tim17d/java-project-61/assets/68468445/3ff3a789-1bbb-4ddd-be04-e9bbe28064f4)
+
+
+## Prime game:
+![image](https://github.com/tim17d/java-project-61/assets/68468445/b8893429-11ed-47eb-9fee-54ffdf4f911c)
+![image](https://github.com/tim17d/java-project-61/assets/68468445/2fe8633a-ea9b-4ad0-a2fa-8a0df7c2d581)
