@@ -9,15 +9,14 @@ public class Progression {
     private static final String GAME_TASK = "What number is missing in the progression?";
 
     public static void play() {
-        var questions = new String[Engine.ROUNDS_TOTAL];
-        var correctAnswers = new String[Engine.ROUNDS_TOTAL];
+        var questionsWithCorrectAnswers = new String[Engine.ROUNDS_TOTAL][2];
         for (int i = 0; i < Engine.ROUNDS_TOTAL; i++) {
             var progression = getProgression();
             var hiddenElementIndex = Utils.getRandomNumberBetween(0, progression.length);
-            questions[i] = progressionToQuestion(progression, hiddenElementIndex);
-            correctAnswers[i] = Integer.toString(progression[hiddenElementIndex]);
+            questionsWithCorrectAnswers[i][0] = progressionToQuestion(progression, hiddenElementIndex);
+            questionsWithCorrectAnswers[i][1] = Integer.toString(progression[hiddenElementIndex]);
         }
-        Engine.run(GAME_TASK, questions, correctAnswers);
+        Engine.run(GAME_TASK, questionsWithCorrectAnswers);
     }
 
     public static int[] getProgression() {

@@ -5,23 +5,27 @@ import java.util.Scanner;
 public class Engine {
     public static final int ROUNDS_TOTAL = 3;
 
-    public static void run(String gameTask, String[] questions, String[] correctAnswers) {
-        Cli.greet();
+    public static void run(String gameTask, String[][] questionsWithCorrectAnswers) {
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        var sc = new Scanner(System.in);
+        var playerName = sc.next();
+        System.out.println("Hello, " + playerName + "!");
         System.out.println(gameTask);
         var scanner = new Scanner(System.in);
         for (int i = 0; i < ROUNDS_TOTAL; i++) {
-            System.out.println("Question: " + questions[i]);
+            System.out.println("Question: " + questionsWithCorrectAnswers[i][0]);
             System.out.print("Your answer: ");
             var answer = scanner.next();
-            if (answer.equals(correctAnswers[i])) {
+            if (answer.equals(questionsWithCorrectAnswers[i][1])) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. "
-                        + "Correct answer was '" + correctAnswers[i] + "'.");
-                System.out.println("Let's try again, " + Cli.getPlayerName() + "!");
+                        + "Correct answer was '" + questionsWithCorrectAnswers[i][1] + "'.");
+                System.out.println("Let's try again, " + playerName + "!");
                 return;
             }
         }
-        System.out.println("Congratulations, " + Cli.getPlayerName() + "!");
+        System.out.println("Congratulations, " + playerName + "!");
     }
 }
