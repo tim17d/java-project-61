@@ -11,7 +11,10 @@ public class Progression {
     public static void play() {
         var questionsWithCorrectAnswers = new String[Engine.ROUNDS_TOTAL][2];
         for (int i = 0; i < Engine.ROUNDS_TOTAL; i++) {
-            var progression = getProgression();
+            var progressionSize = Utils.getRandomNumberBetween(5, 20);
+            var firstTerm = Utils.getRandomNumberBetween(0, 100);
+            var difference = Utils.getRandomNumberBetween(1, 11);
+            var progression = getProgression(progressionSize, firstTerm, difference);
             var hiddenElementIndex = Utils.getRandomNumberBetween(0, progression.length);
             questionsWithCorrectAnswers[i][0] = progressionToQuestion(progression, hiddenElementIndex);
             questionsWithCorrectAnswers[i][1] = Integer.toString(progression[hiddenElementIndex]);
@@ -19,14 +22,10 @@ public class Progression {
         Engine.run(GAME_TASK, questionsWithCorrectAnswers);
     }
 
-    public static int[] getProgression() {
-        var progressionSize = Utils.getRandomNumberBetween(5, 20);
-        var firstTerm = Utils.getRandomNumberBetween(0, 100);
-        var difference = Utils.getRandomNumberBetween(1, 11);
+    public static int[] getProgression(int progressionSize, int firstTerm, int difference) {
         var progression = new int[progressionSize];
-        progression[0] = firstTerm;
-        for (int i = 1; i < progressionSize; i++) {
-            progression[i] = progression[i - 1] + difference;
+        for (int i = 0; i < progressionSize; i++) {
+            progression[i] = difference * i + firstTerm;
         }
         return progression;
     }
