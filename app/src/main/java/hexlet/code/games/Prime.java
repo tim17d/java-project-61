@@ -5,11 +5,13 @@ import hexlet.code.Utils;
 
 public class Prime {
     private static final String GAME_TASK = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static final int MIN_NUMBER_VALUE = 0;
+    private static final int MAX_NUMBER_VALUE = 1000;
 
     public static void play() {
         var questionsWithCorrectAnswers = new String[Engine.ROUNDS_TOTAL][2];
         for (int i = 0; i < Engine.ROUNDS_TOTAL; i++) {
-            var number = Utils.getRandomNumberBetween(0, 1000);
+            var number = Utils.getRandomNumberBetween(MIN_NUMBER_VALUE, MAX_NUMBER_VALUE);
             questionsWithCorrectAnswers[i][0] = Integer.toString(number);
             questionsWithCorrectAnswers[i][1] = isPrime(number) ? "yes" : "no";
         }

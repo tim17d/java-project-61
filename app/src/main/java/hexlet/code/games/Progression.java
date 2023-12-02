@@ -7,13 +7,19 @@ import java.util.StringJoiner;
 
 public class Progression {
     private static final String GAME_TASK = "What number is missing in the progression?";
+    private static final int MIN_PROGRESSION_SIZE = 5;
+    private static final int MAX_PROGRESSION_SIZE = 20;
+    private static final int MIN_FIRST_TERM_VALUE = 0;
+    private static final int MAX_FIRST_TERM_VALUE = 100;
+    private static final int MIN_DIFFERENCE_VALUE = 1;
+    private static final int MAX_DIFFERENCE_VALUE = 11;
 
     public static void play() {
         var questionsWithCorrectAnswers = new String[Engine.ROUNDS_TOTAL][2];
         for (int i = 0; i < Engine.ROUNDS_TOTAL; i++) {
-            var progressionSize = Utils.getRandomNumberBetween(5, 20);
-            var firstTerm = Utils.getRandomNumberBetween(0, 100);
-            var difference = Utils.getRandomNumberBetween(1, 11);
+            var progressionSize = Utils.getRandomNumberBetween(MIN_PROGRESSION_SIZE, MAX_PROGRESSION_SIZE);
+            var firstTerm = Utils.getRandomNumberBetween(MIN_FIRST_TERM_VALUE, MAX_FIRST_TERM_VALUE);
+            var difference = Utils.getRandomNumberBetween(MIN_DIFFERENCE_VALUE, MAX_DIFFERENCE_VALUE);
             var progression = getProgression(progressionSize, firstTerm, difference);
             var hiddenElementIndex = Utils.getRandomNumberBetween(0, progression.length);
             questionsWithCorrectAnswers[i][0] = progressionToQuestion(progression, hiddenElementIndex);
