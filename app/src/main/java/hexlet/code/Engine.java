@@ -8,11 +8,11 @@ public class Engine {
     public static void run(String gameTask, String[][] questionsWithCorrectAnswers) {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        var sc = new Scanner(System.in);
-        var playerName = sc.next();
+        var scanner = new Scanner(System.in);
+        var playerName = scanner.next();
         System.out.println("Hello, " + playerName + "!");
         System.out.println(gameTask);
-        var scanner = new Scanner(System.in);
+
         for (int i = 0; i < ROUNDS_TOTAL; i++) {
             System.out.println("Question: " + questionsWithCorrectAnswers[i][0]);
             System.out.print("Your answer: ");
